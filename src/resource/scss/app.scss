@@ -1,7 +1,25 @@
 @import "variable";
-.test{
-    background: red;
+$--bag-black: #000;
+@mixin theme($theme:$purple-color) {
+    background-color: $theme;
 }
-h1{
-    color: $green-color;
+@mixin box($width: 400px){
+        width: $width;
+}
+.header{
+    @include theme(aqua);
+    @include box;
+}
+.header2{
+    @include theme;
+    @include box(300px);
+}
+.demo{
+    color: red;
+}
+// 
+// 
+.search-form{
+    max-width: 1200px;
+    margin: auto;
 }
